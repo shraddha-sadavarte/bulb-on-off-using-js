@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>
+            Bulb ON-OFF Functionality using JavaScript
+        </title>
+        <script>
+             function bulbOn(){
+                document.getElementById("bulb").src="light-bulb.png";
+                document.querySelector("body").className="on-btn";
+                document.getElementById("off").className="btn";
+                document.getElementById("on").className="container-btn btn";
+             } 
+             function bulbOff(){
+                document.getElementById("bulb").src="off-bulb.png";
+                document.querySelector("body").className="off-btn";
+                document.getElementById("on").className="btn";
+                document.getElementById("off").className="container-btn1 btn";
+             }
+        </script>
+        <style>
+            .container{
+                display: block;
+            }
+            .container-img{
+                height: 350px;
+                width: 350px;
+                display: block;
+                margin: auto;
+            }
+            .container-on-off{
+                display: flex;
+                justify-content: space-around;
+            }
+            .btn{
+                width: 80px;
+                height: 30px;
+                cursor: pointer;
+                border-radius: 20px;
+                border: 0.5px;
+            }
+            .container-btn{
+                background-color: rgb(4, 155, 4);
+                color: white;
+                border: 0.5px;
+            }
+            .container-btn1{
+                background-color:red;
+                color: white;
+                border: 0.5px;
+            }
+            .on-btn{
+                background-color: aliceblue;
+            }
+            .off-btn{
+                background-color: grey;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img src="" class="container-img" id="bulb" alt="Click ON/OFF button to switch the bulb">
+           <div class="container-on-off">
+              <button class="btn" id="on" onclick="bulbOn()">ON</button>
+              <button class="btn" id="off" onclick="bulbOff()">OFF</button>
+           </div>
+        </div>
+    </body>
+</html>
